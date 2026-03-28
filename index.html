@@ -1,25 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-    <link rel="stylesheet" href="">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <input id="inputTarea" placeholder="Escribe una tarea">
-    <select id="selectTarea">
-        <option value="" selected disabled>-- Categoría--</option>
-        <option value="trabajo">💼 Trabajo</option>
-        <option value="estudio">📚 Estudio</option>
-        <option value="personal">🏠 Personal</option>
-        <option value="urgente">🔴 Urgente</option>
-        <option value="otra">Otra ...</option>
-    </select>
-    <button id="btnAgregarTarea">+ Agregar tarea</button>
-    <ul id="listaTareas"></ul>
+<div class="card">
+  <h1>Task Manager</h1>
 
-     <script src="app.js"></script>
+  <p>
+    <span id="completadas">0</span> de 
+    <span id="total">0</span> tareas completadas
+  </p>
+
+  <input 
+    id="inputTarea" 
+    placeholder="Escribe una tarea..." 
+  />
+
+  <span id="error" style="display:none; color:red;">
+    Escribe una tarea válida
+  </span>
+
+  <select id="selectTarea">
+    <option value="" selected disabled>-- Categoría--</option>
+    <option value="trabajo">💼 Trabajo</option>
+    <option value="estudio">📚 Estudio</option>
+    <option value="personal">🏠 Personal</option>
+    <option value="urgente">🔴 Urgente</option>
+    <option value="otra">Otra ...</option>
+  </select>
+
+  <input 
+    id="inputOtraCategoria" 
+    placeholder="Escribe la categoría"
+    style="display:none;"
+  />
+
+  <button id="btnAgregarTarea">+ Agregar tarea</button>
+
+
+  <button id="btnLimpiar">Limpiar completadas</button>
+
+  <ul id="listaTareas"></ul>
+</div>
+
+<script src="app.js"></script>
+
 </body>
 </html>
